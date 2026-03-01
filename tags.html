@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>h1 - самый крупный заголовок - рекомендуется использовать 1 раз на странице</h1> 
+    <h2>h2 - заголовок второго уровня</h2>
+    <h3>h3 - заголовок третьего уровня</h3>
+    <h4>h4 - заголовок четвертого уровня</h4>
+    <h5>h5 - заголовок пятого уровня</h5>
+    <h6>h6 - заголовок шестого уровня</h6>
+
+    <p> p - абзац </p>
+
+    <div> div - группирует/оборачивает контент на части без семантической нагрузки </div>
+
+    <hr> hr - горизонтальная разделительная строка
+
+    <br> br - перенос строки (всё, что после тега - будет перенесено на следующую строку)
+
+    <br>
+    <b> b - выделяет текст </b>
+    <br>
+    <i> i - выделяет текст курсивом </i>
+    <br>
+    <s> s - зачеркивает текст </s>
+    <br>
+    <u> u - подчеркивает текст </u>
+    <br>
+    <q> q - цитата </q>
+
+    <ul>ul - неупорядоченный список
+        <li>li - элемент списка 1</li>
+        <li>li - элемент списка 2
+            <ul>
+                <li>внутри списка можно создавать вложенный список</li>
+            </ul>
+        </li>   
+        <li>li - элемент списка 3</li>
+    </ul>
+
+    <ol>ol - упорядоченный список
+        <li>li - элемент списка 1</li>
+        <li>li - элемент списка 2</li>
+        <li>li - элемент списка 3</li>
+    </ol>
+    
+    <dl> dl - внешняя оболочка списка описаний
+        <dt> dt - термин 1 </dt>
+        <dd> dd - значение 1 </dd>
+        <dd> dd - значение 2 </dd>
+        <dt> dt - термин 2 </dt>
+        <dd> dd - значение 1 </dd>
+        <dd> dd - значение 2 </dd>
+    </dl>
+    
+    <label for="my-select"> Label нужен для создания подписи или метки для элемента формы </label>
+    <select name="my-select" id="my-select">select нужен для создания выпадающего списка
+        <optgroup label="my group"> optgroup группирует опции внутри select. Нельзя вложить один optgroup в другой. Атрибуты: disabled - недоступен для выбора, label - имя группы, другие глобальные атрибуты.
+            <option value="1"> Один </option>
+            <option value="2"> Два </option>
+            <option value="3"> Три </option>
+        </optgroup>
+    </select>
+
+    <br>
+    input нужен для создания полей ввода, кнопок, переключателей и др.
+    Атрибут type определяет тип поля:
+    <ul>
+        <li> text - поле для ввода текста в одну строку. Если атрибут type не указан, по умолчанию используется text.
+            <label for="text-input"> Текстовое поле: </label>
+            <input type="text" id="text-input" name="text-input">
+        </li>
+        <li> email - поле для ввода имейла. Браузер проверит, есть ли в нём знак «@» и домен. 
+            <label for="email-input"> Поле email: </label>
+            <input type="email" id="email-input" name="email-input">
+        </li>
+        <li> search - поле для поиска.
+            <label for="search-input"> Поле поиск: </label>
+            <input type="search" id="search-input" name="search-input">
+        </li>
+        <li> tel - поле для ввода номера телефона.
+            <label for="tel-input"> Поле телефон: </label>
+            <input type="tel" id="tel-input" name="tel-input">
+        </li>
+        <li> url - поле для ввода URL-адреса.
+            <label for="url-input"> Поле URL: </label>
+            <input type="url" id="url-input" name="url-input">
+        </li>
+        <li> password - ввод пароля. По мере ввода символы будут меняться на звёздочки ***. Можно задать минимальное и максимальное количество символов с помощью атрибутов minlength и maxlength.
+            <label for="password-input"> Поле пароль: </label>
+            <input type="password" id="password-input" name="password-input">
+        </li>
+        <li> number - ввод числа.
+            <label for="number-input"> Поле число: </label>
+            <input type="number" id="number-input" name="number-input">
+        </li>
+        <li> checkbox - флажок, или чекбокс, с несколькими вариантами на выбор.
+            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1">
+            <label for="checkbox1"> Вариант 1</label><br>
+            <input type="checkbox" id="checkbox2" name="checkbox2" value="option2">
+            <label for="checkbox2"> Вариант 2</label>
+        </li>
+        <li> radio - круглая кнопка-переключатель для выбора одного из нескольких вариантов (один из группы).
+            <input type="radio" id="radio1" name="radio-group" value="option1">
+            <label for="radio1"> Опция 1</label><br>
+            <input type="radio" id="radio2" name="radio-group" value="option2">
+            <label for="radio2"> Опция 2</label>
+        </li>
+        <li> range - ползунок для выбора чисел из заданного диапазона.
+            <label for="range-input"> Ползунок: </label>
+            <input type="range" id="range-input" name="range-input" min="0" max="100">
+        </li>
+        <li> color - виджет для выбора цвета (колорпикер).
+            <label for="color-input"> Выбор цвета: </label>
+            <input type="color" id="color-input" name="color-input">
+        </li>
+        <li> file - выбор файла для отправки.
+        <label for="file-input"> Выбор файла: </label>
+        <input type="file" id="file-input" name="file-input">
+        </li>
+        <li> date - ввод даты без времени: год, месяц и день.
+            <label for="date-input"> Дата: </label>
+            <input type="date" id="date-input" name="date-input"><br><br>
+        </li>
+        <li> datetime-local - ввод даты и времени в текущем часовом поясе, когда зоны UTC не указываются.
+            <label for="datetime-local-input">Дата и время (локальное):</label>
+            <input type="datetime-local" id="datetime-local-input" name="datetime-local-input">
+        </li>
+        <li> month - ввод месяца и года, без указания часового пояса.
+            <label for="month-input"> Месяц и год: </label>
+            <input type="month" id="month-input" name="month-input">
+        </li>
+        <li> week - ввод номера недели.
+            <label for="week-input"> Неделя: </label>
+            <input type="week" id="week-input" name="week-input">
+        </li>
+        <li> time - ввод времени без указания часового пояса.
+            <label for="time-input">Время:</label>
+            <input type="time" id="time-input" name="time-input">
+        </li>
+        <li> submit - простая кнопка для отправки формы.
+            <input type="submit" value="Отправить форму">
+        </li>
+        <li> button - обычная кнопка.
+            <input type="button" value="Обычная кнопка">
+        </li>
+        <li> image - кнопка «Отправить» в виде картинки. Требует атрибуты src, alt, height, width.
+            <input type="image" src="https://via.placeholder.com/50x25?text=Submit" alt="Отправить" width="50" height="25">
+        </li>
+        <li> reset - кнопка, которая сбрасывает всё, что пользователь ввёл в поля текущей формы ранее.
+            <form action="">
+                <label for="reset-text"> Поле для сброса: </label>
+                <input type="text" id="reset-text" name="reset-text" value="Что-то введено"><br><br>
+                <input type="reset" value="Сбросить форму">
+            </form>
+        </li>
+        <!-- и многие другие -->
+    </ul>
+</body>
+</html>
+
+<!-- Заглушка текстовая Lorem + tab -->
